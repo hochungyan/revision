@@ -27,4 +27,37 @@ either htop/top or ps -ef | grep PID
 
 
 ## 7, Difference between memory and disk
-Memory is RAM and Disk is hard-drive?
+Memory
+It usually means RAM
+It is:
+1.) Fast
+2.) Temp
+3.) Used by other processes
+4.) Cleared when the machine restarts
+
+Check it with:
+free -h 
+
+Disk
+Persistent storage, such as an SSD/hard-drive
+It is:
+1.) Slower than RAM
+2.) Persistent after restart
+3.) Used for files/application/databases/logs
+
+Check it with:
+df -h
+
+Check directory usage with:
+du -sh /path
+
+
+Swap
+Swap is disk spaced used as an extension of memory when RAM is under pressure.
+Check it with:
+swaponon --show
+free -h   
+
+Swap is much slower than physical RAM
+
+
