@@ -13,3 +13,18 @@ curl -v http://hostname:8080/health
 ss -tlnp | grep 8080
 systemctl status application
 journalctl -u application
+
+
+## 4. Check current dir
+pwd
+
+
+## 5. Memory check
+free -h 
+
+## 6. Check current process
+either htop/top or ps -ef | grep PID
+
+
+## 7, Difference between memory and disk
+Memory is RAM and Disk is hard-drive?
