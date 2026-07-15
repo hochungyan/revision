@@ -26,7 +26,7 @@ free -h
 either htop/top or ps -ef | grep PID
 
 
-## 7, Difference between memory and disk
+## 7. Difference between memory and disk
 Memory
 It usually means RAM
 It is:
@@ -60,4 +60,17 @@ free -h
 
 Swap is much slower than physical RAM
 
+## 8. How do you find files modified within the last 3 days?
+find /path -type f -mtime -3
+find /path -type f -mmin -4320
+
+
+## 9. How do you check disk usage on a Linux server?
+How do you check how much disk space is available?
+Which command shows filesystem usage?
+How do you check whether a filesystem is full?
+How do you check the free space on a mounted filesystem?
+
+df -h 
+du -sh /path 
 
