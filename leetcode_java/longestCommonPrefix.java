@@ -7,19 +7,35 @@ if (strs == null || strs.length == 0){
 }
 // If it only contains one string, return that string 
 if (strs.length == 1){
-    return "";
+    return strs[0];
 }
 // First String would be the starting common prefix 
 String commonPrefix = strs[0];
 
 
 // Compare the first and second strings character by character 
-for (int i = 0; i < strs.length; i++){
-    commonPrefix = 
+for (int i = 1; i < strs.length; i++){
+    String newPrefix = "";
+    // Need to find the shorter String for the second for loop to prevent error
+
+    int shorterStringLength = Math.min(commonPrefix.length(), strs[i].length());
+    
+    for (int j =0; j < shorterStringLength; j++){
+        // commonPrefix is a String, so we use char at to loop sth
+        if (commonPrefix.charAt(j) == strs[i].charAt(j)){
+            newPrefix = newPrefix + commonPrefix.charAt(j);
+        }
+        else{
+            break;
+        }
+    }
+
+            // Re-write the new value in the common Prefix variable
+        commonPrefix = newPrefix;
 
 }
-
-
+return commonPrefix;
+}
 
 // Store the common prefix in a new String 
 
