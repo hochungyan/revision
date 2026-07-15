@@ -1,9 +1,25 @@
 class longestCommonPrefix{
 public String longestCommonPrefixs(String[] strs){
+// strs = ["flower","flow","flight"]
 // Edge case first: if the array is empty, return "" 
+if (strs == null || strs.length == 0){
+    return "";
+}
 // If it only contains one string, return that string 
+if (strs.length == 1){
+    return "";
+}
+// First String would be the starting common prefix 
+String commonPrefix = strs[0];
+
 
 // Compare the first and second strings character by character 
+for (int i = 0; i < strs.length; i++){
+    commonPrefix = 
+
+}
+
+
 
 // Store the common prefix in a new String 
 
