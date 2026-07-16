@@ -31,26 +31,21 @@ public int romainToIntegers(String s){
             int currentValue = mapping.get(s.charAt(i));
             if (i < s.length()-1){
                 int nextValue = mapping.get(s.charAt(i+1));
-
+            // Subtract rule ie: IV
             if (currentValue < nextValue){
                 values = values + (nextValue - currentValue);
                 i++; // skip the next char, already counted as part of the pair
             }
-
             else{
                 values = values + currentValue;
             }
         } else {
+            // The Final Value
             values = values + currentValue;
         }
     }
     return values;
-
     }
-
-
-
-
 
 public static void main(String[]args){
     romainToInteger sol = new romainToInteger();
