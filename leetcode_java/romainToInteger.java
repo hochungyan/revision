@@ -1,32 +1,46 @@
 import java.util.HashMap;
 import java.util.Map;
 
-class romainToInteger{
-    
-public int romainToIntegers(String s){
-	// Create a hashMap [Similar to Valid Parentheses]
-    Map<Character, Integer> mapping = new HashMap<>();
-        mapping.put('I',1);
-        mapping.put('V',5);
+class romainToInteger {
+
+    public int romainToIntegers(String s) {
+        // Create a HashMap [Similar to Valid Parentheses]
+        Map<Character, Integer> mapping = new HashMap<>();
+
+        mapping.put('I', 1);
+        mapping.put('V', 5);
         mapping.put('X', 10);
         mapping.put('L', 50);
-        mapping.put('C',100);
-        mapping.put('D',500);
-        mapping.put('M',1000);
+        mapping.put('C', 100);
+        mapping.put('D', 500);
+        mapping.put('M', 1000);
 
-// Placeholder for return value
- int values = 0;
+        // Placeholder for return value
+        int values = 0;
 
- 
-    // for loop 
-        for (Character ch: s.toCharArray()){
-            if (mapping.containsKey(ch)){
-                // keeping adding to the values
-                values = values + mapping.get(ch);
+        // For loop
+        for (int i = 0; i < s.length(); i++) {
+            int currentValue = mapping.get(s.charAt(i));
+
+            // Check whether there is a next character
+            if (i < s.length() - 1) {
+                int nextValue = mapping.get(s.charAt(i + 1));
+
+                // If current value is smaller, subtract it
+                if (currentValue < nextValue) {
+                    values = values - currentValue;
+                } else {
+                    values = values + currentValue;
+                }
+            } else {
+                // Last character must be added
+                values = values + currentValue;
             }
         }
+
         return values;
     }
+
 
     public static void main(String[]args){
         romainToInteger sol = new romainToInteger();
