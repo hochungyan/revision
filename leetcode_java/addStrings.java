@@ -31,6 +31,10 @@ public class addStrings{
                 digit2 = num2.charAt(j) - '0';
                 j--;
             }
+
+            // int digit1 = i >= 0 ? num1.charAt(i) - '0' :0;
+            // int digit2 = j >= 0 ? num2.chatAt(j) - '0' :0;
+
             // add the digit for num1 and num2 and previous carry over
             int sum = digit1 + digit2 + carryOver;
 
