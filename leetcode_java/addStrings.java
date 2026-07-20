@@ -40,6 +40,7 @@ public class addStrings{
             // ie: 13 will return 1
             carryOver = sum / 10;
         }
+        // go from right to left so need to reverse it at the end
         return result.reverse().toString();
     }
 
