@@ -1,3 +1,30 @@
+public class pivotindex {
+    public int pivotIndexs(int[] nums) {
+        int len = nums.length;
+        int len1 = nums.length -1;
+        for (int i =0; i < len; i++){
+            int leftSum = 0;
+            int rightSum = 0;
+
+            for (int left = 0; left < i ; left++){
+                leftSum += nums[left];
+            }
+
+            for (int right = len1; right > i; right--){
+                rightSum += nums[right];
+            }
+
+            if (leftSum == rightSum){
+                return i;
+            }
+  }
+  return -1;
+    }
+public static void main(String[]args){
+    pivotindex sol = new pivotindex();
+}
+
+}
 /* 
 724. Find Pivot Index
 Easy
@@ -45,30 +72,3 @@ Constraints:
 -1000 <= nums[i] <= 1000
 */
 
-public class pivotindex {
-    public int pivotIndexs(int[] nums) {
-        int len = nums.length;
-        int len1 = nums.length -1;
-        for (int i =0; i < len; i++){
-            int leftSum = 0;
-            int rightSum = 0;
-
-            for (int left = 0; left < i ; left++){
-                leftSum += nums[left];
-            }
-
-            for (int right = len1; right > i; right--){
-                rightSum += nums[right];
-            }
-
-            if (leftSum == rightSum){
-                return i;
-            }
-  }
-  return -1;
-    }
-public static void main(String[]args){
-    pivotindex sol = new pivotindex();
-}
-
-}
