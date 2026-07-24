@@ -1,3 +1,5 @@
+package leetcode;
+
 public class isPalindrome {
     public boolean ispalindrome(int x){
         if (x%10 == 0 && x != 0){

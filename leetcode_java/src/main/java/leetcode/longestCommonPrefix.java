@@ -1,3 +1,5 @@
+package leetcode;
+
 class longestCommonPrefix{
 public String longestCommonPrefixs(String[] strs){
 // strs = ["flower","flow","flight"]
@@ -50,7 +52,6 @@ return commonPrefix;
 // Return the final common prefix
 
 }
-    }
 
 
 

@@ -1,3 +1,5 @@
+package leetcode;
+
 /*
 575. Distribute Candies
 

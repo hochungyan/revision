@@ -1,3 +1,5 @@
+package leetcode;
+
 public class addStrings{
     public String addString(String num1, String num2){
         // My attempt...

@@ -1,3 +1,5 @@
+package leetcode;
+
 public class pivotindex {
     public int pivotIndexs(int[] nums) {
 //         int len = nums.length;
